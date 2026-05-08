@@ -118,7 +118,7 @@ export default async function LocaleLayout({
                 </AnimationWrapper>
             </DictionaryProvider>
             <Script
-                src="//cdn.cookie-script.com/s/cebff792f9483632258de02eed8dcc3f.js"
+                src="//cdn.cookie-script.com/s/e24e31ccc2852c73a59ca00a43b534f1.js"
                 strategy="lazyOnload"
             />
         </>
