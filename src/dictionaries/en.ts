@@ -222,6 +222,36 @@ const en: Dictionary = {
             'Other',
         ],
     },
+    faq: {
+        subtitle: 'FAQ',
+        title: 'Clear answers.\nNo ambiguity.',
+        items: [
+            {
+                question: 'What industrial installation services does Kraftinox offer?',
+                answer: 'Kraftinox provides 8 categories of industrial installations: thermomechanical (heating, cooling, steam), technological (food & pharma process systems), pressure systems (steam, gas, compressed air up to 4350 psi), orbital and TIG welding, fire protection systems (hydrants, sprinklers), thermal insulation and jacketing, technical gas installations (oxygen, hydrogen, argon, CO2), and CIP systems for industrial hygiene.',
+            },
+            {
+                question: 'Is Kraftinox ISCIR authorised and TÜV-Süd certified (PED)?',
+                answer: 'Yes. Kraftinox SRL holds ISCIR authorisations and TÜV-Süd certification under the European Pressure Equipment Directive (PED). Our welders are IWT-qualified, and every project is fully documented: WPS, material specifications, isometric maps, and test reports.',
+            },
+            {
+                question: 'Does Kraftinox install stainless steel systems for food and pharmaceutical industries?',
+                answer: 'Yes. We specialise in food grade and pharma grade stainless steel installations: sanitary process piping, CIP stations, utility systems, and hygienic fluid distribution. Our clients include Richter Gedeon, Sandoz, Hochland, Bergenbier, and Stada.',
+            },
+            {
+                question: 'Where does Kraftinox operate? Do you work outside Târgu Mureș?',
+                answer: 'Kraftinox is based in Târgu Mureș (Str. Budiului 68, Mureș County), but we execute industrial projects nationwide across Romania. We have completed projects in Bucharest, Brașov, Ploiești, Târnăveni, and other locations. Contact us for a free technical assessment.',
+            },
+            {
+                question: 'What is orbital welding and when is it required?',
+                answer: 'Orbital welding is an automated TIG welding process performed under controlled conditions for maximum precision on stainless steel pipes. It is required where hygiene and quality standards are strict: food and pharmaceutical lines, and high-purity technical gas stations. Kraftinox owns orbital welding equipment (Kemppi Master TIG, Esab) and employs qualified welders.',
+            },
+            {
+                question: 'What technical documentation does Kraftinox provide on project completion?',
+                answer: 'On handover, we provide complete documentation: isometric maps with joint numbering, WPS (Welding Procedure Specification), visual inspection and test reports, material quality certificates, and — where applicable — PED conformity documents issued by TÜV-Süd.',
+            },
+        ],
+    },
     thankYou: {
         title: 'Thank you!',
         subtitle: 'Your request has been sent successfully.',

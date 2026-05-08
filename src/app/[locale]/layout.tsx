@@ -87,22 +87,64 @@ export default async function LocaleLayout({
     const dict = await getDictionary(validLocale);
     const isRo = validLocale === 'ro';
 
+    const services = isRo
+        ? ['Instalații termomecanice', 'Instalații tehnologice', 'Instalații sub presiune', 'Sudură orbitală și TIG', 'Sisteme de protecție la incendiu', 'Termoizolații și înveliri', 'Instalații gaze tehnice', 'Sisteme CIP']
+        : ['Thermomechanical installations', 'Technological installations', 'Pressure systems', 'Orbital and TIG welding', 'Fire protection systems', 'Thermal insulation & cladding', 'Technical gas installations', 'CIP systems'];
+
     const jsonLd = {
         '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: 'Kraftinox',
+        '@type': ['LocalBusiness', 'ProfessionalService'],
+        name: 'Kraftinox SRL',
+        legalName: 'Kraftinox SRL',
         image: `${siteUrl}/assets/img/og-image.jpg`,
-        description: isRo 
-            ? 'Instalații industriale din inox, sudură orbitală și TIG.' 
-            : 'Industrial stainless steel installations, orbital and TIG welding.',
+        logo: `${siteUrl}/assets/img/logo/logo.png`,
+        description: isRo
+            ? 'Kraftinox execută instalații industriale din inox, sudură orbitală și TIG, sisteme sub presiune ISCIR/TÜV-Süd, instalații food & pharma și gaze tehnice. Târgu Mureș, România — din 2011.'
+            : 'Kraftinox delivers stainless steel industrial installations, orbital and TIG welding, ISCIR/TÜV-Süd pressure systems, food & pharma and technical gas installations. Târgu Mureș, Romania — since 2011.',
         url: siteUrl,
+        telephone: '+40730612266',
+        email: 'office@kraftinox.com',
+        foundingDate: '2011',
+        numberOfEmployees: { '@type': 'QuantitativeValue', value: 20 },
         address: {
             '@type': 'PostalAddress',
+            streetAddress: 'Str. Budiului 68',
             addressLocality: 'Târgu Mureș',
-            addressCountry: 'RO'
+            postalCode: '540390',
+            addressRegion: 'Mureș',
+            addressCountry: 'RO',
         },
-        telephone: "+400730612266",
-        email: "office@kraftinox.com.ro"
+        geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 46.5403,
+            longitude: 24.5581,
+        },
+        areaServed: {
+            '@type': 'Country',
+            name: 'Romania',
+        },
+        openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '08:00',
+            closes: '17:00',
+        },
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: isRo ? 'Servicii instalații industriale' : 'Industrial installation services',
+            itemListElement: services.map((name) => ({
+                '@type': 'Offer',
+                itemOffered: { '@type': 'Service', name },
+            })),
+        },
+        knowsAbout: isRo
+            ? ['instalații inox', 'sudură orbitală', 'instalații sub presiune', 'ISCIR', 'TÜV-Süd', 'PED', 'inox food grade', 'sisteme CIP', 'gaze tehnice', 'termoizolații']
+            : ['stainless steel installations', 'orbital welding', 'pressure systems', 'ISCIR', 'TÜV-Süd', 'PED', 'food grade stainless', 'CIP systems', 'technical gases', 'thermal insulation'],
+        sameAs: [
+            'https://www.facebook.com/kraftinox',
+            'https://www.instagram.com/kraftinox',
+            'https://www.linkedin.com/company/kraftinox',
+        ],
     };
 
     return (

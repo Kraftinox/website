@@ -29,6 +29,11 @@ export interface NavLink {
     href: string;
 }
 
+export interface FaqItem {
+    question: string;
+    answer: string;
+}
+
 export interface Dictionary {
     nav: {
         home: string;
@@ -113,6 +118,11 @@ export interface Dictionary {
             linkText: string;
             error: string;
         };
+    };
+    faq: {
+        subtitle: string;
+        title: string;
+        items: FaqItem[];
     };
     thankYou: {
         title: string;

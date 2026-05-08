@@ -223,6 +223,36 @@ const ro: Dictionary = {
             'Altele',
         ],
     },
+    faq: {
+        subtitle: 'Întrebări frecvente',
+        title: 'Răspunsuri clare.\nFără ambiguitate.',
+        items: [
+            {
+                question: 'Ce servicii de instalații industriale oferă Kraftinox?',
+                answer: 'Kraftinox execută 8 categorii de instalații industriale: termomecanice (încălzire, răcire, abur), tehnologice (sisteme de proces food & pharma), sub presiune (abur, gaze, aer comprimat până la 4350 psi), sudură orbitală și TIG, sisteme de protecție la incendiu (hidranți, sprinklere), termoizolații și jacketing, instalații gaze tehnice (oxigen, hidrogen, argon, CO2) și sisteme CIP pentru igienizare industrială.',
+            },
+            {
+                question: 'Este Kraftinox autorizat ISCIR și certificat TÜV-Süd (PED)?',
+                answer: 'Da. Kraftinox SRL deține autorizații ISCIR și certificare TÜV-Süd conform Directivei Europene PED (Pressure Equipment Directive) pentru instalații sub presiune. Sudorii sunt calificați IWT, iar fiecare lucrare este documentată complet: WPS, specificație de materiale, harta izometrică și rapoarte de testare.',
+            },
+            {
+                question: 'Kraftinox execută instalații inox pentru industria alimentară și farmaceutică?',
+                answer: 'Da. Suntem specializați în instalații inox food grade și pharma grade: tubulatură sanitară de proces, stații CIP, sisteme de utilități și instalații de distribuție fluide în condiții igienice stricte. Printre clienții noștri: Richter Gedeon, Sandoz, Hochland, Bergenbier și Stada.',
+            },
+            {
+                question: 'Unde activează Kraftinox? Executați proiecte în afara Târgu Mureșului?',
+                answer: 'Kraftinox are sediul în Târgu Mureș (Str. Budiului 68, jud. Mureș), dar execută proiecte industriale la nivel național. Am finalizat lucrări în București, Brașov, Ploiești, Târnăveni și alte localități. Contactați-ne pentru o evaluare tehnică fără costuri.',
+            },
+            {
+                question: 'Ce este sudura orbitală și când este necesară?',
+                answer: 'Sudura orbitală este un proces automatizat de sudare TIG în condiții controlate, utilizat pentru îmbinarea țevilor din inox cu precizie maximă. Este necesară în aplicații unde standardele de igienă și calitate sunt stricte: linii alimentare, farmaceutice și stații de gaze tehnice de înaltă puritate. Kraftinox deține echipament orbital propriu (Kemppi Master TIG, Esab) și sudori calificați.',
+            },
+            {
+                question: 'Ce documentație tehnică predă Kraftinox la finalizarea unui proiect?',
+                answer: 'La predarea fiecărei lucrări furnizăm documentație completă: harta izometrică cu numerotarea îmbinărilor, WPS (Welding Procedure Specification), rapoarte de testare și inspecție vizuală, certificate de calitate ale materialelor și, acolo unde este aplicabil, documentele de conformitate PED emise de TÜV-Süd.',
+            },
+        ],
+    },
     thankYou: {
         title: 'Mulțumim!',
         subtitle: 'Cererea dumneavoastră a fost trimisă cu succes.',

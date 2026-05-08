@@ -9,6 +9,7 @@ import ContactForm from '@/components/form/ContactForm';
 import HomeService from '@/components/service/HomeService';
 import HomeHero from '@/components/hero/HomeHero';
 import FormTitle from '@/components/contact/FormTitle';
+import HomeFaq from '@/components/faq/HomeFaq';
 import { getServices, getProjects, getCertificates, getPartners } from '@/utils/api';
 import { locales } from '@/i18n/config';
 
@@ -53,6 +54,7 @@ export default async function LocalePage({ params }: PageProps) {
                 <CorporateAInstagram apiCertificates={certificates} />
             </div>
             <ModernAgencyBrand apiPartners={partners} />
+            <HomeFaq />
             <div id="contact">
                 <ContactUsTopArea />
                 <div className="tp-contact-us-form-ptb pb-120">

@@ -4,10 +4,10 @@ const siteUrl = 'https://kraftinox.com';
 const locales = ['ro', 'en'] as const;
 
 const routes = [
-    { 
-        path: '', 
-        priority: 1, 
-        changeFrequency: 'monthly' as const 
+    {
+        path: '',
+        priority: 1,
+        changeFrequency: 'weekly' as const
     },
     { 
         path: '/termeni-si-conditii', 
