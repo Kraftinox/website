@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const siteUrl = 'https://kraftinox.ro';
+const siteUrl = 'https://kraftinox.com';
 const locales = ['ro', 'en'] as const;
 
 const routes = [

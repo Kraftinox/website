@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/api/', '/_next/'],
             },
         ],
-        sitemap: 'https://kraftinox.ro/sitemap.xml',
-        host: 'https://kraftinox.ro',
+        sitemap: 'https://kraftinox.com/sitemap.xml',
+        host: 'https://kraftinox.com',
     };
 }

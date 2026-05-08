@@ -15,17 +15,17 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "kraftinox.prismaadmin.ro",
+        hostname: "admin.kraftinox.com",
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "kraftinox.ro",
+        hostname: "kraftinox.com",
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "www.kraftinox.ro",
+        hostname: "www.kraftinox.com",
         pathname: "/**",
       },
     ],

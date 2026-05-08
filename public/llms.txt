@@ -6,10 +6,10 @@ Kraftinox SRL executes precision industrial installations with full documentatio
 
 ## Pages
 
-- [Homepage RO](https://kraftinox.ro/ro): Main site in Romanian — services, projects, about, certifications, contact
-- [Homepage EN](https://kraftinox.ro/en): Main site in English
-- [Terms & Conditions RO](https://kraftinox.ro/ro/termeni-si-conditii): GDPR privacy policy and terms of use
-- [Terms & Conditions EN](https://kraftinox.ro/en/termeni-si-conditii): GDPR privacy policy and terms of use
+- [Homepage RO](https://kraftinox.com/ro): Main site in Romanian — services, projects, about, certifications, contact
+- [Homepage EN](https://kraftinox.com/en): Main site in English
+- [Terms & Conditions RO](https://kraftinox.com/ro/termeni-si-conditii): GDPR privacy policy and terms of use
+- [Terms & Conditions EN](https://kraftinox.com/en/termeni-si-conditii): GDPR privacy policy and terms of use
 
 ## Services
 

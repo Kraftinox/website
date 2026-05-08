@@ -1,6 +1,6 @@
 import 'server-only';
 
-const API_BASE_URL = process.env.API_BASE_URL ?? 'https://kraftinox.prismaadmin.ro/api';
+const API_BASE_URL = process.env.API_BASE_URL ?? 'https://admin.kraftinox.com/api';
 const API_KEY = process.env.API_KEY ?? '';
 
 // Types

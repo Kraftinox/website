@@ -7,7 +7,7 @@ import { locales, type Locale } from '@/i18n/config';
 import { notFound } from 'next/navigation';
 import LangUpdater from '@/components/shared/LangUpdater';
 
-const siteUrl = 'https://kraftinox.ro';
+const siteUrl = 'https://kraftinox.com';
 export const viewport: Viewport = {
     themeColor: '#ffffff',
     width: 'device-width',

@@ -27,7 +27,7 @@ const content = {
         sections: [
             {
                 heading: '1. Operatorul de date cu caracter personal',
-                body: 'KRAFTINOX SRL este operatorul datelor cu caracter personal colectate prin intermediul formularului de contact de pe site-ul kraftinox.ro. Puteți lua legătura cu noi la adresa de email office@kraftszer.ro sau la sediul social indicat mai sus.',
+                body: 'KRAFTINOX SRL este operatorul datelor cu caracter personal colectate prin intermediul formularului de contact de pe site-ul kraftinox.com. Puteți lua legătura cu noi la adresa de email office@kraftszer.ro sau la sediul social indicat mai sus.',
             },
             {
                 heading: '2. Date colectate și scopul prelucrării',
@@ -72,7 +72,7 @@ const content = {
         sections: [
             {
                 heading: '1. Data Controller',
-                body: 'KRAFTINOX SRL is the controller of personal data collected through the contact form on kraftinox.ro. You may contact us at office@kraftszer.ro or at the registered address above.',
+                body: 'KRAFTINOX SRL is the controller of personal data collected through the contact form on kraftinox.com. You may contact us at office@kraftszer.ro or at the registered address above.',
             },
             {
                 heading: '2. Data Collected and Purpose',
@@ -179,7 +179,7 @@ export default async function TermsPage({
 
                 <hr style={{ borderColor: 'rgba(1,1,3,0.1)', marginTop: '40px', marginBottom: '32px' }} />
                 <p style={{ fontSize: '13px', color: '#999', textAlign: 'center' }}>
-                    © {new Date().getFullYear()} KRAFTINOX SRL · kraftinox.ro
+                    © {new Date().getFullYear()} KRAFTINOX SRL · kraftinox.com
                 </p>
             </div>
         </main>
