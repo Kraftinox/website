@@ -1,0 +1,674 @@
+@forward '../../public/assets/css/bootstrap.css'; 
+@forward '../../public/assets/css/spacing.css';
+@forward '../../public/assets/scss/main.scss';
+@import 'react-photo-view/dist/react-photo-view.css';
+
+/* ── Fix: make clip-anim images visible (imageClipingEffect removed) ── */
+.tp-clip-anim .tp-anim-img {
+  opacity: 1 !important;
+}
+
+/* ── Fix: prevent horizontal overflow without breaking position:sticky ── */
+html, body {
+  overflow-x: clip;
+}
+
+/* ── Portfolio slider navigation buttons ── */
+.kf-portfolio-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(1, 1, 3, 0.18);
+  background: transparent;
+  color: #010103;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: #00A86D;
+    border-color: #00A86D;
+    color: #fff;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  @media (max-width: 767px) {
+    width: 38px;
+    height: 38px;
+    svg { width: 16px; height: 16px; }
+  }
+}
+
+/* ── Swiper slide height fix for portfolio ── */
+.ds-portfolio-area .swiper-slide {
+  height: auto;
+}
+
+/* ── tp-text-revel: CSS fade-in (replaces GSAP SplitText) ── */
+.tp-text-revel {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  &.is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── CSS-only fade-in animations (replaces GSAP ScrollTrigger) ── */
+.tp_fade_anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.tp_fade_anim[data-fade-from="top"] {
+  transform: translateY(-30px);
+}
+.tp_fade_anim[data-fade-from="left"] {
+  transform: translateX(-30px);
+}
+.tp_fade_anim[data-fade-from="right"] {
+  transform: translateX(30px);
+}
+.tp_fade_anim.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/* On mobile: disable horizontal offsets to prevent overflow */
+@media (max-width: 767px) {
+  .tp_fade_anim[data-fade-from="left"],
+  .tp_fade_anim[data-fade-from="right"] {
+    transform: translateY(30px);
+  }
+}
+
+
+/* ── Brand grid items ── */
+.kf-brand-item {
+  padding: 30px 20px;
+  border: 1px solid rgba(1, 1, 3, 0.08);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    border-color: rgba(1, 1, 3, 0.18);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+}
+.kf-brand-img {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  img {
+    max-height: 100%;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  .kf-brand-item:hover & img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+.kf-brand-name {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(1, 1, 3, 0.5);
+  font-family: var(--tp-ff-unbounded);
+  transition: color 0.3s ease;
+  .kf-brand-item:hover & {
+    color: rgba(1, 1, 3, 0.85);
+  }
+}
+
+/* Video modal style */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9); 
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-modal-container {
+  width: 90%;
+  max-width: 1200px; 
+  position: relative;
+}
+
+.video-modal-iframe {
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  color: white;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-modal-close:hover {
+  transform: scale(1.2);
+}
+
+/* Click outside to close */
+.video-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.modal-backdrop{
+  display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+
+// Skew Portfolio Slider Styles
+.skew-slider-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.skew-slider-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.skew-slider-controls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.skew-slider-arrow,
+.slides-numbers-wrap,
+.tp-portfolio-slider__copyright,
+.tp-portfolio-slider__social {
+    pointer-events: auto;
+}
+
+.skew-slider-arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+//z-index utility classes
+.z-index-9999{
+    z-index: 9999 !important;
+}
+
+.error-text{
+    color: red;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* ── Footer address description ── */
+.kf-footer-address-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245, 247, 245, 0.45);
+    margin-top: 12px;
+}
+
+/* ── Footer CTA button override (dark bg → needs white variant) ── */
+.ds-footer-btn .tp-btn-green {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+
+    &:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #010103;
+    }
+}
+
+/* ── Language Switcher (kf-ls) ───────────────────────────────────────────── */
+.kf-ls {
+    position: relative;
+
+    // ── Trigger button
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.04);
+        cursor: pointer;
+        transition: border-color 0.2s ease, background 0.2s ease;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.42);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        // Sticky header (light bg)
+        .header-sticky & {
+            border-color: rgba(1, 1, 3, 0.14);
+            background: transparent;
+
+            &:hover {
+                border-color: rgba(1, 1, 3, 0.32);
+                background: rgba(1, 1, 3, 0.04);
+            }
+        }
+    }
+
+    // ── Flag wrapper
+    &__flag {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+        transition: transform 0.18s ease;
+
+        .kf-ls__btn:hover & {
+            transform: scale(1.08);
+        }
+    }
+
+    // ── Locale code label
+    &__code {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-family: var(--tp-ff-unbounded);
+        color: rgba(255, 255, 255, 0.88);
+
+        .header-sticky & {
+            color: rgba(1, 1, 3, 0.82);
+        }
+    }
+
+    // ── Chevron arrow
+    &__chevron {
+        color: rgba(255, 255, 255, 0.45);
+        flex-shrink: 0;
+        transform-origin: center;
+
+        .header-sticky & {
+            color: rgba(1, 1, 3, 0.38);
+        }
+    }
+
+    // ── Dropdown panel
+    &__dropdown {
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 0;
+        min-width: 110px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transform-origin: top center;
+        z-index: 9999;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    // ── Dropdown option
+    &__option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 16px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        transition: background 0.14s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    &__option-code {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-family: var(--tp-ff-unbounded);
+        color: rgba(1, 1, 3, 0.8);
+    }
+}
+
+/* ── Mobile menu top bar ────────────────────────────────────────────────── */
+.kf-mobile-menu-top {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .kf-ls__btn {
+        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .kf-ls__dropdown {
+        background: rgba(30, 30, 30, 0.96);
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .kf-ls__option:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .kf-ls__option-code {
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE OVERRIDES  (≤ 767px)
+   ═══════════════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+
+  /* ── 1. Egységes szekció-térközök (120 → 60, 90 → 48) ── */
+  .pt-120 { padding-top: 60px !important; }
+  .pb-120 { padding-bottom: 60px !important; }
+  .pt-90  { padding-top: 48px !important; }
+  .pb-90  { padding-bottom: 48px !important; }
+  .mb-60  { margin-bottom: 30px !important; }
+  .mb-65  { margin-bottom: 32px !important; }
+  .mb-50  { margin-bottom: 28px !important; }
+
+  /* ── 2. Szekció-cím és felirat: középre igazítás ── */
+  .tp-section-subtitle {
+    display: block;
+    text-align: center;
+    &::before { display: none; }
+  }
+  .tp-section-title { text-align: center; }
+
+  /* ── 3. Hero szekció ── */
+  .tp-hero-ptb {
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+  .tp-hero-thumb-2 { height: 240px !important; }
+  .tp-hero-title   { text-align: center; }
+  .tp-hero-content-box { text-align: center; }
+  .tp-hero-btn { justify-content: center; display: flex; }
+
+  /* ── 4. Funfact (statisztikák) – 2 oszlop, kompakt kártya ── */
+  .ma-funfact-ptb { padding-top: 60px !important; }
+  .ma-funfact-item {
+    padding: 20px 14px !important;
+    flex-direction: column !important;
+    gap: 6px;
+    .ma-funfact-subtitle { margin-right: 0 !important; font-size: 10px; }
+    .ma-funfact-content h4 { font-size: 28px !important; margin-bottom: 4px; }
+    .ma-funfact-content p  { font-size: 12px !important; }
+  }
+
+  /* ── 5. Szolgáltatások: sticky letiltása + 2 oszlopos kompakt kártya ── */
+  .tp-fixed-title {
+    position: relative !important;
+    top: auto !important;
+  }
+  .tp-service-item {
+    padding: 22px 16px !important;
+    .tp-service-item-icon {
+      margin-bottom: 18px !important;
+      img { width: 52px !important; height: 52px !important; }
+    }
+    .tp-service-item-title { font-size: 16px !important; margin-bottom: 10px; }
+    p { font-size: 13px !important; margin-bottom: 14px !important; }
+  }
+  .tp-service-heading { margin-bottom: 20px; }
+
+  /* ── 6. Portfólió: fejléc középre mobilon ── */
+  .ds-portfolio-area .col-lg-12 { text-align: center !important; }
+
+  /* ── 7. Rólunk szekció ── */
+  .bnc-about-top-wrap   { padding-bottom: 36px; }
+  .bnc-about-bottom-wrap { padding-bottom: 36px; }
+  .bnc-about-content-btn-box {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .bnc-about-content-btn {
+    width: 100%;
+    .tp-btn-green {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .bnc-about-content { margin-top: 24px; }
+
+  /* ── 8. Partner logók: 260px fix szél → rugalmas ── */
+  .kf-brand-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    img { max-height: 80px; }
+  }
+  .kf-brand-item { padding: 18px 10px; }
+  .ds-brand-area .d-flex { align-items: flex-start !important; }
+  .ds-brand-area .d-flex > p { max-width: 100% !important; text-align: center; }
+  .ds-brand-area .d-flex > div { width: 100%; }
+
+  /* ── 9. Kapcsolat szekció ── */
+  .tp-contact-us-map { height: 280px !important; }
+  .tp-contact-us-top-ptb { padding-bottom: 60px !important; }
+  .tp-contact-us-subtitle { text-align: center; }
+  .tp-contact-us-info {
+    .ar-about-funfact-content { text-align: center; }
+    .ar-about-funfact-item    { justify-content: center; }
+    .ar-about-funfact-item-bottom { text-align: center; }
+    .ar-about-funfact-item-social {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+  }
+  .tp-contact-us-form-border { padding: 32px 20px !important; }
+
+  /* ── 10. Tanúsítványok szekció ── */
+  .kf-cert-title-box { text-align: center; }
+  .kf-cert-lead      { text-align: center; }
+
+  /* ── 11. Footer CTA középre ── */
+  .ds-footer-heading { text-align: center; margin-bottom: 20px; }
+  .ds-footer-btn { text-align: center !important; }
+  .ds-footer-top-wrap .tp-section-title { text-align: center; }
+
+  /* ── 12. Díjak / értékek szekció ── */
+  .sa-award-right-text { text-align: center !important; }
+  .sa-award-title-box { text-align: center; }
+}
+
+/* ── Tablet (768px–991px) kiegészítő finomítások ── */
+@media (min-width: 768px) and (max-width: 991px) {
+  .pt-120 { padding-top: 80px !important; }
+  .pb-120 { padding-bottom: 80px !important; }
+  .kf-brand-img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .tp-fixed-title {
+    position: relative !important;
+    top: auto !important;
+  }
+  .bnc-about-content-btn-box {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   GDPR Checkbox
+   ───────────────────────────────────────────── */
+.kf-gdpr-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.kf-gdpr-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 17px;
+    height: 17px;
+    accent-color: #00A86D;
+    cursor: pointer;
+  }
+}
+.kf-gdpr-text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(1, 1, 3, 0.65);
+}
+.kf-gdpr-link {
+  color: #00A86D;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  &:hover { color: #008055; }
+}
+
+/* ─────────────────────────────────────────────
+   Footer mobile improvements
+   ───────────────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Logo column: center on mobile */
+  .kf-footer-logo-col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .kf-footer-logo-col .tp-footer-logo a {
+    display: inline-block;
+  }
+  .kf-footer-logo-col .kf-footer-social {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Footer top CTA: reduce padding */
+  .tp-footer-area { padding-top: 60px !important; }
+  .ds-footer-bottom-warp { padding-top: 40px !important; }
+
+  /* Copyright: center all items on mobile */
+  .kf-copyright-mobile-center {
+    text-align: center !important;
+    margin-bottom: 6px;
+  }
+
+  /* About items: compact on mobile */
+  .bnc-about-item {
+    .bnc-about-item-icon { margin-bottom: 14px !important; }
+    .bnc-about-item-icon img { width: 56px !important; height: 56px !important; }
+    .bnc-about-item-title { font-size: 14px !important; }
+    p { font-size: 12px !important; }
+  }
+}
+
+/* ── Email obfuscation (CSS-only, no JS) ── */
+.kf-obf-email {
+  &::before { content: attr(data-u); }
+  &::after  { content: "\0040" attr(data-d); }
+}
+
+/* ── Map facade (click-to-load Google Maps) ── */
+.kf-map-facade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 450px;
+  background: #f0f2f0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #444;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #e4e8e4;
+  }
+}
+.kf-map-facade-icon {
+  width: 48px;
+  height: 48px;
+  color: #00A86D;
+}
+.kf-map-facade-address {
+  font-size: 16px;
+  font-weight: 600;
+  color: #010103;
+}
+.kf-map-facade-cta {
+  font-size: 13px;
+  color: rgba(1, 1, 3, 0.5);
+}
