@@ -1,13 +1,11 @@
 'use client';
-import { useRef, useState, useCallback, useEffect } from 'react';
-import { gsap } from 'gsap';
+import { useRef, useState, useCallback } from 'react';
 import { useDictionary } from '@/provider/DictionaryProvider';
 
 export default function HomeFaq() {
     const { faq } = useDictionary();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
-    const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const closingRef = useRef(false);
+    const wrapRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     const faqSchema = {
         '@context': 'https://schema.org',
@@ -19,39 +17,9 @@ export default function HomeFaq() {
         })),
     };
 
-    useEffect(() => {
-        if (openIndex === null || closingRef.current) return;
-        const el = answerRefs.current[openIndex];
-        if (!el) return;
-        gsap.set(el, { height: 'auto', overflow: 'hidden' });
-        const h = el.offsetHeight;
-        gsap.fromTo(el,
-            { height: 0, opacity: 0 },
-            { height: h, opacity: 1, duration: 0.44, ease: 'power3.out' }
-        );
-    }, [openIndex]);
-
     const toggle = useCallback((i: number) => {
-        if (openIndex === i) {
-            const el = answerRefs.current[i];
-            if (!el) return;
-            closingRef.current = true;
-            gsap.to(el, {
-                height: 0, opacity: 0, duration: 0.3, ease: 'power3.in',
-                onComplete: () => { closingRef.current = false; setOpenIndex(null); },
-            });
-        } else if (openIndex !== null) {
-            const prev = answerRefs.current[openIndex];
-            if (!prev) { setOpenIndex(i); return; }
-            closingRef.current = true;
-            gsap.to(prev, {
-                height: 0, opacity: 0, duration: 0.24, ease: 'power3.in',
-                onComplete: () => { closingRef.current = false; setOpenIndex(i); },
-            });
-        } else {
-            setOpenIndex(i);
-        }
-    }, [openIndex]);
+        setOpenIndex((prev) => (prev === i ? null : i));
+    }, []);
 
     return (
         <section className="kf-faq-area">
@@ -62,7 +30,6 @@ export default function HomeFaq() {
             <div className="container container-1510">
                 <div className="row align-items-start">
 
-                    {/* Bal oldal: cím */}
                     <div className="col-lg-4 mb-50">
                         <span className="tp-section-subtitle kf-faq-subtitle tp_fade_anim" data-delay=".2">
                             {faq.subtitle}
@@ -74,7 +41,6 @@ export default function HomeFaq() {
                         </h2>
                     </div>
 
-                    {/* Jobb oldal: accordion */}
                     <div className="col-lg-8">
                         <div className="kf-faq-list tp_fade_anim" data-delay=".3">
                             {faq.items.map((item, i) => {
@@ -94,14 +60,15 @@ export default function HomeFaq() {
                                             </span>
                                         </button>
 
-                                        {isOpen && (
-                                            <div
-                                                className="kf-faq-answer"
-                                                ref={(el) => { answerRefs.current[i] = el; }}
-                                            >
+                                        <div
+                                            className="kf-faq-answer-wrap"
+                                            ref={(el) => { wrapRefs.current[i] = el; }}
+                                            aria-hidden={!isOpen}
+                                        >
+                                            <div className="kf-faq-answer">
                                                 <p>{item.answer}</p>
                                             </div>
-                                        )}
+                                        </div>
                                     </div>
                                 );
                             })}

@@ -53,7 +53,7 @@ html, body {
 }
 
 /* ── tp-text-revel: CSS fade-in (replaces GSAP SplitText) ── */
-.tp-text-revel {
+.js-ready .tp-text-revel {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.65s ease, transform 0.65s ease;
@@ -64,29 +64,30 @@ html, body {
 }
 
 /* ── CSS-only fade-in animations (replaces GSAP ScrollTrigger) ── */
-.tp_fade_anim {
+/* Only hide content when JS is active — crawlers/LLMs see full content */
+.js-ready .tp_fade_anim {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   will-change: opacity, transform;
 }
-.tp_fade_anim[data-fade-from="top"] {
+.js-ready .tp_fade_anim[data-fade-from="top"] {
   transform: translateY(-30px);
 }
-.tp_fade_anim[data-fade-from="left"] {
+.js-ready .tp_fade_anim[data-fade-from="left"] {
   transform: translateX(-30px);
 }
-.tp_fade_anim[data-fade-from="right"] {
+.js-ready .tp_fade_anim[data-fade-from="right"] {
   transform: translateX(30px);
 }
-.tp_fade_anim.is-visible {
+.js-ready .tp_fade_anim.is-visible {
   opacity: 1;
   transform: translate(0, 0);
 }
 /* On mobile: disable horizontal offsets to prevent overflow */
 @media (max-width: 767px) {
-  .tp_fade_anim[data-fade-from="left"],
-  .tp_fade_anim[data-fade-from="right"] {
+  .js-ready .tp_fade_anim[data-fade-from="left"],
+  .js-ready .tp_fade_anim[data-fade-from="right"] {
     transform: translateY(30px);
   }
 }
@@ -769,6 +770,14 @@ html, body {
   width: 1.5px;
   height: 12px;
 }
+.kf-faq-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  .kf-faq-item--open & {
+    grid-template-rows: 1fr;
+  }
+}
 .kf-faq-answer {
   overflow: hidden;
   padding-left: calc(52px + 24px);
@@ -779,6 +788,14 @@ html, body {
     line-height: 1.8;
     margin: 0;
     padding-bottom: 28px;
+    padding-top: 2px;
     max-width: 720px;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.28s ease 0.08s, transform 0.28s ease 0.08s;
+    .kf-faq-item--open & {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

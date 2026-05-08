@@ -147,12 +147,131 @@ export default async function LocaleLayout({
         ],
     };
 
+    const orgSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'Kraftinox SRL',
+        legalName: 'Kraftinox SRL',
+        url: siteUrl,
+        logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}/assets/img/logo/logo.png`,
+            width: 200,
+            height: 60,
+        },
+        image: `${siteUrl}/assets/img/og-image.jpg`,
+        description: isRo
+            ? 'Kraftinox SRL execută instalații industriale din inox, sudură orbitală și TIG, sisteme sub presiune ISCIR/TÜV-Süd. Târgu Mureș, România — din 2011.'
+            : 'Kraftinox SRL executes stainless steel industrial installations, orbital and TIG welding, ISCIR/TÜV-Süd pressure systems. Târgu Mureș, Romania — since 2011.',
+        foundingDate: '2011',
+        numberOfEmployees: { '@type': 'QuantitativeValue', value: 20 },
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Str. Budiului 68',
+            addressLocality: 'Târgu Mureș',
+            postalCode: '540390',
+            addressRegion: 'Mureș',
+            addressCountry: 'RO',
+        },
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+40730612266',
+            email: 'office@kraftinox.com',
+            contactType: 'customer service',
+            areaServed: 'RO',
+            availableLanguage: ['Romanian', 'English'],
+        },
+        sameAs: [
+            'https://www.facebook.com/kraftinox',
+            'https://www.instagram.com/kraftinox',
+            'https://www.linkedin.com/company/kraftinox',
+        ],
+    };
+
+    const websiteSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Kraftinox',
+        alternateName: 'Kraftinox SRL',
+        url: siteUrl,
+        inLanguage: isRo ? 'ro-RO' : 'en-GB',
+        publisher: {
+            '@type': 'Organization',
+            name: 'Kraftinox SRL',
+            url: siteUrl,
+            logo: {
+                '@type': 'ImageObject',
+                url: `${siteUrl}/assets/img/logo/logo.png`,
+                width: 200,
+                height: 60,
+            },
+            contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+40730612266',
+                contactType: 'customer service',
+                areaServed: 'RO',
+                availableLanguage: ['Romanian', 'English'],
+            },
+            sameAs: [
+                'https://www.facebook.com/kraftinox',
+                'https://www.instagram.com/kraftinox',
+                'https://www.linkedin.com/company/kraftinox',
+            ],
+        },
+    };
+
+    const navSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: isRo ? 'Navigare Kraftinox' : 'Kraftinox Navigation',
+        itemListElement: (isRo
+            ? [
+                { name: 'Acasă', description: 'Pagina principală Kraftinox', url: `${siteUrl}/ro` },
+                { name: 'Servicii', description: 'Instalații industriale, sudură orbitală, sisteme sub presiune', url: `${siteUrl}/ro#servicii` },
+                { name: 'Proiecte', description: 'Proiecte industriale realizate', url: `${siteUrl}/ro#proiecte` },
+                { name: 'Despre noi', description: 'Despre Kraftinox SRL', url: `${siteUrl}/ro#despre` },
+                { name: 'Certificări', description: 'Autorizații ISCIR și TÜV-Süd', url: `${siteUrl}/ro#certificari` },
+                { name: 'Contact', description: 'Contactați Kraftinox pentru ofertă', url: `${siteUrl}/ro#contact` },
+            ]
+            : [
+                { name: 'Home', description: 'Kraftinox homepage', url: `${siteUrl}/en` },
+                { name: 'Services', description: 'Industrial installations, orbital welding, pressure systems', url: `${siteUrl}/en#servicii` },
+                { name: 'Projects', description: 'Completed industrial projects', url: `${siteUrl}/en#proiecte` },
+                { name: 'About us', description: 'About Kraftinox SRL', url: `${siteUrl}/en#despre` },
+                { name: 'Certifications', description: 'ISCIR and TÜV-Süd authorisations', url: `${siteUrl}/en#certificari` },
+                { name: 'Contact', description: 'Contact Kraftinox for a quote', url: `${siteUrl}/en#contact` },
+            ]
+        ).map((item, i) => ({
+            '@type': 'SiteNavigationElement',
+            position: i + 1,
+            name: item.name,
+            description: item.description,
+            url: item.url,
+        })),
+    };
+
     return (
         <>
+            <link rel="preconnect" href="https://cdn.cookie-script.com" />
+            <link rel="dns-prefetch" href="https://cdn.cookie-script.com" />
+            <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js-ready')` }} />
             <LangUpdater locale={validLocale} />
             <script
                 type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+            />
+            <script
+                type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(navSchema) }}
             />
             <DictionaryProvider dict={dict}>
                 <AnimationWrapper>
