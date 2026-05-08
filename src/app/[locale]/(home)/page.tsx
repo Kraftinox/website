@@ -12,7 +12,7 @@ import FormTitle from '@/components/contact/FormTitle';
 import { getServices, getProjects, getCertificates, getPartners } from '@/utils/api';
 import { locales } from '@/i18n/config';
 
-export const revalidate = 3600; // ISR: rebuild page at most once per hour
+export const revalidate = 300;
 
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));

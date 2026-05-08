@@ -95,13 +95,11 @@ export function getProjects(locale: string): Promise<ProjectItem[]> {
 export function getCertificates(): Promise<CertificateItem[]> {
     return apiFetch<CertificateItem[]>('/certificates/get.php', {
         tags: ['certificates'],
-        revalidate: 3600,
     });
 }
 
 export function getPartners(locale: string): Promise<PartnerItem[]> {
     return apiFetch<PartnerItem[]>(`/partners/get.php?locale=${locale}`, {
         tags: ['partners'],
-        revalidate: 3600,
     });
 }
