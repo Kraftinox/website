@@ -102,7 +102,7 @@ export default async function LocaleLayout({
             addressCountry: 'RO'
         },
         telephone: "+400730612266",
-        email: "office@kraftszer.ro"
+        email: "office@kraftinox.com.ro"
     };
 
     return (
