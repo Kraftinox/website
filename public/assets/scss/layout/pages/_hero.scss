@@ -91,6 +91,14 @@
             }
         }
         &-wrapper{
+            @media (min-width: 1700px) {
+                margin-left: -20px;
+                transform: scale(.97);
+            }
+            @media #{$x3l} {
+                margin-left: -60px;
+                transform: scale(.95);
+            }
             @media #{$xxl} {
                 margin-left: -140px;
                 transform: scale(.9);
