@@ -32,7 +32,7 @@ const ro: Dictionary = {
         ],
     },
     services: {
-        tagline: 'Patru discipline.\nUn singur standard.',
+        tagline: 'Patru discipline.\n Un singur standard.',
         description:
             'Oferim servicii complete în domeniul instalațiilor industriale, respectând cele mai înalte standarde de calitate, siguranță și precizie. Echipa noastră este specializată în execuția sistemelor complexe pentru industrii precum alimentară, farmaceutică și producție industrială.',
         cta: 'Cere o ofertă',
@@ -82,7 +82,7 @@ const ro: Dictionary = {
     },
     portfolio: {
         subtitle: 'Lucrări realizate',
-        title: 'Proiecte industriale.\nExecuție verificată.',
+        title: 'Proiecte industriale.\n Execuție verificată.',
         items: [
             { image: '/assets/img/projects/55.png', title: 'Instalații termomecanice – stație de frig', location: 'Târgu Mureș', year: '2023' },
             { image: '/assets/img/projects/66.png', title: 'Sisteme hidranți și sprinklere', location: 'Hilton Târgu Mureș', year: '2023' },
@@ -94,7 +94,7 @@ const ro: Dictionary = {
     },
     about: {
         subtitle: 'Despre noi',
-        title: 'Standarde înalte.\nExecuție verificată.',
+        title: 'Standarde înalte.\n Execuție verificată.',
         body1: 'Dezvoltăm și implementăm instalații industriale la standarde înalte de calitate, cu accent pe siguranță, durabilitate și execuție precisă. Experiența noastră acoperă proiecte din industria alimentară, farmaceutică și producție industrială.',
         body2: 'Prin echipa noastră specializată și infrastructura proprie, livrăm soluții complete pentru sisteme din inox, instalații de proces și aplicații sub presiune, adaptate cerințelor fiecărui proiect.',
         cta1: 'Contactați-ne',
@@ -102,22 +102,22 @@ const ro: Dictionary = {
         items: [
             {
                 image: '/assets/img/icons/22.png',
-                title: 'Precizie în execuție\nindustrială',
+                title: 'Precizie în execuție \n industrială',
                 description: 'Realizăm instalații cu toleranțe stricte, respectând standardele tehnice și de siguranță.',
             },
             {
                 image: '/assets/img/icons/33.png',
-                title: 'Expertiză în sisteme\nsub presiune',
+                title: 'Expertiză în sisteme \n sub presiune',
                 description: 'Implementăm soluții pentru abur, gaze și fluide la presiuni ridicate.',
             },
             {
                 image: '/assets/img/icons/44.png',
-                title: 'Soluții pentru industrie\nalimentară & pharma',
+                title: 'Soluții pentru industrie\n alimentară & pharma',
                 description: 'Instalații din inox pentru medii unde igiena și calitatea sunt esențiale.',
             },
             {
                 image: '/assets/img/icons/11.png',
-                title: 'Tehnologie modernă\nși echipamente',
+                title: 'Tehnologie modernă\n și echipamente',
                 description: 'Utilizăm sudură orbitală și echipamente profesionale pentru rezultate de top.',
             },
         ],
@@ -166,7 +166,7 @@ const ro: Dictionary = {
     },
     certifications: {
         subtitle: 'Certificări & Autorizări',
-        title: 'Lucrăm cu standarde.\nDovedim cu documente.',
+        title: 'Lucrăm cu standarde.\n Dovedim cu documente.',
         body: 'Fiecare proiect este susținut de documentație completă — de la calificările sudorilor IWT până la certificările de presiune PED. Transparență totală față de client, la fiecare predare.',
     },
     partners: {
@@ -177,7 +177,7 @@ const ro: Dictionary = {
     contact: {
         subtitle:
             'Lucrăm cu producători și integratori industriali din toată România. Contactați-ne pentru o evaluare tehnică fără costuri.',
-        title: 'Să luăm\nlegătura!',
+        title: 'Să luăm\n legătura!',
         phone: 'Telefon',
         hours: 'Program: Lun–Vin, 08:00–17:00',
         mapTitle: 'Kraftinox – Locație Târgu Mureș',
@@ -225,7 +225,7 @@ const ro: Dictionary = {
     },
     faq: {
         subtitle: 'Întrebări frecvente',
-        title: 'Răspunsuri clare.\nFără ambiguitate.',
+        title: 'Răspunsuri clare.\n Fără ambiguitate.',
         items: [
             {
                 question: 'Ce servicii de instalații industriale oferă Kraftinox?',
@@ -260,7 +260,7 @@ const ro: Dictionary = {
         cta: 'Înapoi la pagina principală',
     },
     footer: {
-        tagline: 'Instalații industriale de înaltă precizie.\nSudură orbitală, sisteme sub presiune,\ninox food & pharma — din 2011.',
+        tagline: 'Instalații industriale de înaltă precizie.\n Sudură orbitală, sisteme sub presiune,\n inox food & pharma — din 2011.',
         ctaHeadingBefore: 'Hai să construim',
         ctaHeadingAccent: 'împreună.',
         ctaDescription: 'Un proiect bine executat începe cu o discuție tehnică. Contactați-ne pentru o evaluare fără costuri și fără obligații.',

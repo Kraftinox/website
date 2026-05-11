@@ -32,7 +32,7 @@ const en: Dictionary = {
         ],
     },
     services: {
-        tagline: 'Four disciplines.\nOne standard.',
+        tagline: 'Four disciplines.\n One standard.',
         description:
             'We provide complete industrial installation services, adhering to the highest standards of quality, safety, and precision. Our team specialises in complex system execution for food, pharmaceutical, and industrial production industries.',
         cta: 'Request a quote',
@@ -101,22 +101,22 @@ const en: Dictionary = {
         items: [
             {
                 image: '/assets/img/icons/22.png',
-                title: 'Precision in industrial\nexecution',
+                title: 'Precision in industrial\n execution',
                 description: 'We build installations with strict tolerances, adhering to technical and safety standards.',
             },
             {
                 image: '/assets/img/icons/33.png',
-                title: 'Expertise in pressure\nsystems',
+                title: 'Expertise in pressure\n systems',
                 description: 'We implement solutions for steam, gas, and high-pressure fluids.',
             },
             {
                 image: '/assets/img/icons/44.png',
-                title: 'Food & pharma\nindustry solutions',
+                title: 'Food & pharma\n industry solutions',
                 description: 'Stainless steel installations for environments where hygiene and quality are essential.',
             },
             {
                 image: '/assets/img/icons/11.png',
-                title: 'Modern technology\nand equipment',
+                title: 'Modern technology\n and equipment',
                 description: 'We use orbital welding and professional equipment for top-tier results.',
             },
         ],
@@ -165,7 +165,7 @@ const en: Dictionary = {
     },
     certifications: {
         subtitle: 'Certifications & Authorisations',
-        title: 'We work to standards.\nWe prove it with documents.',
+        title: 'We work to standards.\n We prove it with documents.',
         body: 'Every project is backed by complete documentation — from IWT welder qualifications to PED pressure certifications. Full transparency with clients at every handover.',
     },
     partners: {
@@ -176,7 +176,7 @@ const en: Dictionary = {
     contact: {
         subtitle:
             'We work with manufacturers and industrial integrators across Romania. Contact us for a free technical assessment.',
-        title: "Let's get\nin touch!",
+        title: "Let's get\n in touch!",
         phone: 'Phone',
         hours: 'Hours: Mon–Fri, 08:00–17:00',
         mapTitle: 'Kraftinox – Location Târgu Mureș',
@@ -224,7 +224,7 @@ const en: Dictionary = {
     },
     faq: {
         subtitle: 'FAQ',
-        title: 'Clear answers.\nNo ambiguity.',
+        title: 'Clear answers.\n No ambiguity.',
         items: [
             {
                 question: 'What industrial installation services does Kraftinox offer?',
@@ -259,7 +259,7 @@ const en: Dictionary = {
         cta: 'Back to homepage',
     },
     footer: {
-        tagline: 'High-precision industrial installations.\nOrbital welding, pressure systems,\nfood & pharma stainless — since 2011.',
+        tagline: 'High-precision industrial installations.\n Orbital welding, pressure systems,\n food & pharma stainless — since 2011.',
         ctaHeadingBefore: "Let's build",
         ctaHeadingAccent: 'together.',
         ctaDescription: 'A well-executed project starts with a technical conversation. Contact us for a free, no-obligation assessment.',
