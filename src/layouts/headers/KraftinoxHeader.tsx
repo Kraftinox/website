@@ -84,13 +84,15 @@ const KraftinoxHeader = ({ isHomePage = true }: { isHomePage?: boolean }) => {
                                         <span><ButtonArrowIcon /></span>
                                     </SmoothScrollLink>
                                 </div>
-                                <button
-                                    className="tp-header-bar tp-offcanvas-open-btn d-xl-none"
-                                    aria-label={nav.aria.openMenu}
-                                    onClick={() => setMobileOpen(true)}
-                                >
-                                    <i /><i /><i />
-                                </button>
+                                <div className="tp-header-bar d-xl-none">
+                                    <button
+                                        className="tp-offcanvas-open-btn"
+                                        aria-label={nav.aria.openMenu}
+                                        onClick={() => setMobileOpen(true)}
+                                    >
+                                        <i /><i /><i />
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

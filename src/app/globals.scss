@@ -439,7 +439,45 @@ html, body {
     &::before { display: none; }
   }
   .tp-section-title { text-align: center; }
+  /* ── 2. Szekció-cím és felirat: középre igazítás + mobilos méretcsökkentés ── */
 
+  /*
+   * MOBILOS CÍM MÉRETEK — itt módosítható
+   * Eredeti értékek (visszaállításhoz):
+   *   --kf-title-base-mobile:      36px   (tp-section-title alap)
+   *   --kf-title-wide-mobile:      48px   (fs-52 / tl-unbounded variáns)
+   *   --kf-title-hero-mobile:      42px   (hero cím)
+   *   --kf-title-faq-mobile:       28px   (FAQ cím)
+   */
+  // :root {
+  //   // --kf-title-base-mobile:   26px;
+  //   // --kf-title-wide-mobile:   24px;
+  //   // --kf-title-hero-mobile:   36px;
+  //   // --kf-title-faq-mobile:    24px;
+  //     --kf-title-base-mobile:      36px   
+  //     --kf-title-wide-mobile:      48px   
+  //     --kf-title-hero-mobile:      42px   
+  //     --kf-title-faq-mobile:       28px   
+  // }
+
+  // .tp-section-subtitle {
+  //   display: block;
+  //   text-align: center;
+  //   &::before { display: none; }
+  // }
+  // .tp-section-title {
+  //   text-align: center;
+  //   font-size: var(--kf-title-base-mobile) !important;
+  //   letter-spacing: -0.02em !important;
+  //   line-height: 1.2 !important;
+  // }
+  // .tp-section-title.tl-unbounded,
+  // .tp-section-title.fs-52 {
+  //   font-size: var(--kf-title-wide-mobile) !important;
+  //   letter-spacing: -0.01em !important;
+  // }
+  // .tp-hero-title { font-size: var(--kf-title-hero-mobile) !important; letter-spacing: -0.5px !important; }
+  // .kf-faq-title  { font-size: var(--kf-title-faq-mobile) !important; }
   /* ── 3. Hero szekció ── */
   .tp-hero-ptb {
     padding-top: 120px !important;
