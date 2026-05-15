@@ -43,9 +43,9 @@ export default async function LocalePage({ params }: PageProps) {
             <div id="servicii">
                 <HomeService apiServices={services} />
             </div>
-            <div id="proiecte">
+            {/* <div id="proiecte">
                 <DesignStudioPortfolio apiProjects={projects} />
-            </div>
+            </div> */}
             <div id="despre">
                 <BusinessConsultingAbout />
             </div>

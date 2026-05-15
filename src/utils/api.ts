@@ -9,6 +9,7 @@ export interface ServiceItem {
     image_path: string;
     title: string;
     description: string;
+    gallery: string[];
 }
 
 export interface ProjectItem {

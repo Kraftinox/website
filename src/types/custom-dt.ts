@@ -18,6 +18,7 @@ export interface ServiceItemDt {
   icon?: string;
   title: string;
   image?: string;
+  gallery?: string[];
   description: string;
   svgIcon?: React.ElementType;
   num?: string;

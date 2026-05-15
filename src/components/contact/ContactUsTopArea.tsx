@@ -25,8 +25,8 @@ const ContactUsTopArea = () => {
 
     const contactItems = [
         { id: 1, icon: <PhoneIconFive />, label: contact.phone, value: '+40 0730 612 266', href: 'tel:+40730612266', obf: null },
-        { id: 2, icon: <EmailIconTwo />,  label: 'Email',       value: null, href: 'mailto:office@kraftinox.com.ro',  obf: { u: 'office',  d: 'kraftinox.com.ro' } },
-        { id: 3, icon: <ChatIcon />,      label: '',            value: null, href: 'mailto:technic@kraftinox.com.ro', obf: { u: 'technic', d: 'kraftinox.com.ro' } },
+        { id: 2, icon: <EmailIconTwo />,  label: 'Email',       value: null, href: 'mailto:office@kraftinox.com',  obf: { u: 'office',  d: 'kraftinox.com' } },
+        { id: 3, icon: <ChatIcon />,      label: '',            value: null, href: 'mailto:technic@kraftinox.com', obf: { u: 'technic', d: 'kraftinox.com' } },
     ];
 
     return (

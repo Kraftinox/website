@@ -130,8 +130,8 @@ const HomeFooter = () => {
                                     </h4>
                                     <div className="tp-footer-widget-info mb-25">
                                         <span><Link href="tel:+40730612266">+40 0730 612 266</Link></span>
-                                        <span><Link href="mailto:office@kraftinox.com.ro" aria-label="office@kraftinox.com.ro"><span className="kf-obf-email" data-u="office" data-d="kraftinox.com.ro" aria-hidden="true" /></Link></span>
-                                        <span><Link href="mailto:technic@kraftinox.com.ro" aria-label="technic@kraftinox.com.ro"><span className="kf-obf-email" data-u="technic" data-d="kraftinox.com.ro" aria-hidden="true" /></Link></span>
+                                        <span><Link href="mailto:office@kraftinox.com" aria-label="office@kraftinox.com"><span className="kf-obf-email" data-u="office" data-d="kraftinox.com" aria-hidden="true" /></Link></span>
+                                        <span><Link href="mailto:technic@kraftinox.com" aria-label="technic@kraftinox.com"><span className="kf-obf-email" data-u="technic" data-d="kraftinox.com" aria-hidden="true" /></Link></span>
                                     </div>
                                     <div className="tp-footer-widget-info mb-25">
                                         <span className="kf-footer-address">

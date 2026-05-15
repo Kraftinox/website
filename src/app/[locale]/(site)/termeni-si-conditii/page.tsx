@@ -27,7 +27,7 @@ const content = {
         sections: [
             {
                 heading: '1. Operatorul de date cu caracter personal',
-                body: 'KRAFTINOX SRL este operatorul datelor cu caracter personal colectate prin intermediul formularului de contact de pe site-ul kraftinox.com. Puteți lua legătura cu noi la adresa de email office@kraftinox.com.ro sau la sediul social indicat mai sus.',
+                body: 'KRAFTINOX SRL este operatorul datelor cu caracter personal colectate prin intermediul formularului de contact de pe site-ul kraftinox.com. Puteți lua legătura cu noi la adresa de email office@kraftinox.com sau la sediul social indicat mai sus.',
             },
             {
                 heading: '2. Date colectate și scopul prelucrării',
@@ -43,7 +43,7 @@ const content = {
             },
             {
                 heading: '5. Drepturile dumneavoastră',
-                body: 'Conform Regulamentului (UE) 2016/679 (RGPD), aveți dreptul la: acces la datele personale, rectificarea datelor incorecte, ștergerea datelor ("dreptul de a fi uitat"), restricționarea prelucrării, portabilitatea datelor, retragerea consimțământului în orice moment. Pentru exercitarea acestor drepturi, contactați-ne la office@kraftinox.com.ro. Aveți de asemenea dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) — www.dataprotection.ro.',
+                body: 'Conform Regulamentului (UE) 2016/679 (RGPD), aveți dreptul la: acces la datele personale, rectificarea datelor incorecte, ștergerea datelor ("dreptul de a fi uitat"), restricționarea prelucrării, portabilitatea datelor, retragerea consimțământului în orice moment. Pentru exercitarea acestor drepturi, contactați-ne la office@kraftinox.com Aveți de asemenea dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) — www.dataprotection.ro.',
             },
             {
                 heading: '6. Utilizarea site-ului',
@@ -59,7 +59,7 @@ const content = {
             },
             {
                 heading: '9. Contact',
-                body: 'Pentru orice întrebare legată de prelucrarea datelor sau de acești termeni: office@kraftinox.com.ro | +40 730 612 266 | Str. Budiului nr. 68, Târgu Mureș.',
+                body: 'Pentru orice întrebare legată de prelucrarea datelor sau de acești termeni: office@kraftinox.com | +40 730 612 266 | Str. Budiului nr. 68, Târgu Mureș.',
             },
         ],
         backLabel: '← Înapoi la site',
@@ -72,7 +72,7 @@ const content = {
         sections: [
             {
                 heading: '1. Data Controller',
-                body: 'KRAFTINOX SRL is the controller of personal data collected through the contact form on kraftinox.com. You may contact us at office@kraftinox.com.ro or at the registered address above.',
+                body: 'KRAFTINOX SRL is the controller of personal data collected through the contact form on kraftinox.com. You may contact us at office@kraftinox.com or at the registered address above.',
             },
             {
                 heading: '2. Data Collected and Purpose',
@@ -88,7 +88,7 @@ const content = {
             },
             {
                 heading: '5. Your Rights',
-                body: 'Under Regulation (EU) 2016/679 (GDPR), you have the right to: access your personal data, rectify inaccurate data, erasure ("right to be forgotten"), restriction of processing, data portability, withdraw consent at any time. To exercise these rights, contact us at office@kraftinox.com.ro. You also have the right to lodge a complaint with the Romanian National Supervisory Authority (ANSPDCP) — www.dataprotection.ro.',
+                body: 'Under Regulation (EU) 2016/679 (GDPR), you have the right to: access your personal data, rectify inaccurate data, erasure ("right to be forgotten"), restriction of processing, data portability, withdraw consent at any time. To exercise these rights, contact us at office@kraftinox.com You also have the right to lodge a complaint with the Romanian National Supervisory Authority (ANSPDCP) — www.dataprotection.ro.',
             },
             {
                 heading: '6. Use of the Website',
@@ -104,7 +104,7 @@ const content = {
             },
             {
                 heading: '9. Contact',
-                body: 'For any questions regarding data processing or these terms: office@kraftinox.com.ro | +40 730 612 266 | Str. Budiului no. 68, Târgu Mureș, Romania.',
+                body: 'For any questions regarding data processing or these terms: office@kraftinox.com | +40 730 612 266 | Str. Budiului no. 68, Târgu Mureș, Romania.',
             },
         ],
         backLabel: '← Back to site',

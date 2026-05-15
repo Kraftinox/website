@@ -24,8 +24,9 @@ const HomeService = ({ apiServices }: HomeServiceProps) => {
             image: s.image_path ? toMediaUrl(s.image_path) : '',
             title: s.title || '',
             description: s.description || '',
+            gallery: (s.gallery || []).map(toMediaUrl).filter(Boolean),
         }))
-        : services.items.map((item, i) => ({ id: i + 1, ...item, image: item.icon }));
+        : services.items.map((item, i) => ({ id: i + 1, ...item, image: item.icon, gallery: [] as string[] }));
 
     return (
         <div
