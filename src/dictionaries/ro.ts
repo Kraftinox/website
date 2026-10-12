@@ -241,7 +241,7 @@ const ro: Dictionary = {
             },
             {
                 question: 'Unde activează Kraftinox? Executați proiecte în afara Târgu Mureșului?',
-                answer: 'Kraftinox are sediul în Târgu Mureș (Str. Budiului 68, jud. Mureș), dar execută proiecte industriale la nivel național. Am finalizat lucrări în București, Brașov, Ploiești, Târnăveni și alte localități. Contactați-ne pentru o evaluare tehnică fără costuri.',
+                answer: 'Kraftinox are sediul în Târgu Mureș (Str. Budiului 33, jud. Mureș), dar execută proiecte industriale la nivel național. Am finalizat lucrări în București, Brașov, Ploiești, Târnăveni și alte localități. Contactați-ne pentru o evaluare tehnică fără costuri.',
             },
             {
                 question: 'Ce este sudura orbitală și când este necesară?',

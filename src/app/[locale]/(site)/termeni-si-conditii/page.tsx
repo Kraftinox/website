@@ -23,7 +23,7 @@ const content = {
         title: 'Termeni și Condiții',
         updated: 'Ultima actualizare: mai 2025',
         company: 'KRAFTINOX SRL (CUI: RO 48151776, J26/759/2023)',
-        address: 'Str. Budiului nr. 68, Târgu Mureș, România',
+        address: 'Str. Budiului nr. 33, Târgu Mureș, România',
         sections: [
             {
                 heading: '1. Operatorul de date cu caracter personal',
@@ -59,7 +59,7 @@ const content = {
             },
             {
                 heading: '9. Contact',
-                body: 'Pentru orice întrebare legată de prelucrarea datelor sau de acești termeni: office@kraftinox.com | +40 730 612 266 | Str. Budiului nr. 68, Târgu Mureș.',
+                body: 'Pentru orice întrebare legată de prelucrarea datelor sau de acești termeni: office@kraftinox.com | +40 730 612 266 | Str. Budiului nr. 33, Târgu Mureș.',
             },
         ],
         backLabel: '← Înapoi la site',
@@ -68,7 +68,7 @@ const content = {
         title: 'Terms and Conditions',
         updated: 'Last updated: May 2025',
         company: 'KRAFTINOX SRL (VAT: RO 48151776, Reg: J26/759/2023)',
-        address: 'Str. Budiului no. 68, Târgu Mureș, Romania',
+        address: 'Str. Budiului no. 33, Târgu Mureș, Romania',
         sections: [
             {
                 heading: '1. Data Controller',
@@ -104,7 +104,7 @@ const content = {
             },
             {
                 heading: '9. Contact',
-                body: 'For any questions regarding data processing or these terms: office@kraftinox.com | +40 730 612 266 | Str. Budiului no. 68, Târgu Mureș, Romania.',
+                body: 'For any questions regarding data processing or these terms: office@kraftinox.com | +40 730 612 266 | Str. Budiului no. 33, Târgu Mureș, Romania.',
             },
         ],
         backLabel: '← Back to site',

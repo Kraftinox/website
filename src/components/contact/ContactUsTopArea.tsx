@@ -63,7 +63,7 @@ const ContactUsTopArea = () => {
                         >
                             <div className="ar-about-funfact-content">
                                 <h4 style={{ fontFamily: 'var(--tp-ff-unbounded)', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                                    Str. Budiului 68<br />Târgu Mureș
+                                    Str. Budiului 33<br />Târgu Mureș
                                 </h4>
                             </div>
 

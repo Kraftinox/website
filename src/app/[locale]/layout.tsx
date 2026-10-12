@@ -108,7 +108,7 @@ export default async function LocaleLayout({
         numberOfEmployees: { '@type': 'QuantitativeValue', value: 20 },
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Str. Budiului 68',
+            streetAddress: 'Str. Budiului 33',
             addressLocality: 'Târgu Mureș',
             postalCode: '540390',
             addressRegion: 'Mureș',
@@ -119,6 +119,7 @@ export default async function LocaleLayout({
             latitude: 46.5403,
             longitude: 24.5581,
         },
+        hasMap: 'https://www.google.com/maps/search/?api=1&query=Str.+Budiului+33+Targu+Mures+Romania',
         areaServed: {
             '@type': 'Country',
             name: 'Romania',
@@ -168,7 +169,7 @@ export default async function LocaleLayout({
         numberOfEmployees: { '@type': 'QuantitativeValue', value: 20 },
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Str. Budiului 68',
+            streetAddress: 'Str. Budiului 33',
             addressLocality: 'Târgu Mureș',
             postalCode: '540390',
             addressRegion: 'Mureș',

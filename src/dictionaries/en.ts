@@ -240,7 +240,7 @@ const en: Dictionary = {
             },
             {
                 question: 'Where does Kraftinox operate? Do you work outside Târgu Mureș?',
-                answer: 'Kraftinox is based in Târgu Mureș (Str. Budiului 68, Mureș County), but we execute industrial projects nationwide across Romania. We have completed projects in Bucharest, Brașov, Ploiești, Târnăveni, and other locations. Contact us for a free technical assessment.',
+                answer: 'Kraftinox is based in Târgu Mureș (Str. Budiului 33, Mureș County), but we execute industrial projects nationwide across Romania. We have completed projects in Bucharest, Brașov, Ploiești, Târnăveni, and other locations. Contact us for a free technical assessment.',
             },
             {
                 question: 'What is orbital welding and when is it required?',

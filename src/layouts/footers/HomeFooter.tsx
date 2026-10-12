@@ -135,8 +135,10 @@ const HomeFooter = () => {
                                     </div>
                                     <div className="tp-footer-widget-info mb-25">
                                         <span className="kf-footer-address">
-                                            Str. Budiului, Nr.68<br />
-                                            Târgu Mureș, 540390
+                                            <Link href="https://www.google.com/maps/search/?api=1&query=Str.+Budiului+33+Targu+Mures+Romania" target="_blank" rel="noopener noreferrer">
+                                                Str. Budiului, Nr.33<br />
+                                                Târgu Mureș, 540390
+                                            </Link>
                                         </span>
                                         <span className="kf-footer-hours">{footer.hours}</span>
                                     </div>
