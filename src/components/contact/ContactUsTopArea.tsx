@@ -24,7 +24,8 @@ const ContactUsTopArea = () => {
     const { contact } = useDictionary();
 
     const contactItems = [
-        { id: 1, icon: <PhoneIconFive />, label: contact.phone, value: '+40 0730 612 266', href: 'tel:+40730612266', obf: null },
+        { id: 1, icon: <PhoneIconFive />, label: contact.phone, value: '+40 (727) 349 720', href: 'tel:+40727349720', obf: null },
+        { id: 4, icon: <PhoneIconFive />, label: '',            value: '+40 (748) 949 806', href: 'tel:+40748949806', obf: null },
         { id: 2, icon: <EmailIconTwo />,  label: 'Email',       value: null, href: 'mailto:office@kraftinox.com',  obf: { u: 'office',  d: 'kraftinox.com' } },
         { id: 3, icon: <ChatIcon />,      label: '',            value: null, href: 'mailto:technic@kraftinox.com', obf: { u: 'technic', d: 'kraftinox.com' } },
     ];

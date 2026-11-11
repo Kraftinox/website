@@ -102,7 +102,7 @@ export default async function LocaleLayout({
             ? 'Kraftinox execută instalații industriale din inox, sudură orbitală și TIG, sisteme sub presiune ISCIR/TÜV-Süd, instalații food & pharma și gaze tehnice. Târgu Mureș, România — din 2011.'
             : 'Kraftinox delivers stainless steel industrial installations, orbital and TIG welding, ISCIR/TÜV-Süd pressure systems, food & pharma and technical gas installations. Târgu Mureș, Romania — since 2011.',
         url: siteUrl,
-        telephone: '+40730612266',
+        telephone: '+40727349720',
         email: 'office@kraftinox.com',
         foundingDate: '2011',
         numberOfEmployees: { '@type': 'QuantitativeValue', value: 20 },
@@ -177,7 +177,7 @@ export default async function LocaleLayout({
         },
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+40730612266',
+            telephone: '+40727349720',
             email: 'office@kraftinox.com',
             contactType: 'customer service',
             areaServed: 'RO',
@@ -209,7 +209,7 @@ export default async function LocaleLayout({
             },
             contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+40730612266',
+                telephone: '+40727349720',
                 contactType: 'customer service',
                 areaServed: 'RO',
                 availableLanguage: ['Romanian', 'English'],

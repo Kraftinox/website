@@ -129,7 +129,8 @@ const HomeFooter = () => {
                                         {footer.contactTitle}
                                     </h4>
                                     <div className="tp-footer-widget-info mb-25">
-                                        <span><Link href="tel:+40730612266">+40 0730 612 266</Link></span>
+                                        <span><Link href="tel:+40727349720">+40 (727) 349 720</Link></span>
+                                        <span><Link href="tel:+40748949806">+40 (748) 949 806</Link></span>
                                         <span><Link href="mailto:office@kraftinox.com" aria-label="office@kraftinox.com"><span className="kf-obf-email" data-u="office" data-d="kraftinox.com" aria-hidden="true" /></Link></span>
                                         <span><Link href="mailto:technic@kraftinox.com" aria-label="technic@kraftinox.com"><span className="kf-obf-email" data-u="technic" data-d="kraftinox.com" aria-hidden="true" /></Link></span>
                                     </div>

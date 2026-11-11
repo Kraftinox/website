@@ -59,7 +59,7 @@ const content = {
             },
             {
                 heading: '9. Contact',
-                body: 'Pentru orice întrebare legată de prelucrarea datelor sau de acești termeni: office@kraftinox.com | +40 730 612 266 | Str. Budiului nr. 33, Târgu Mureș.',
+                body: 'Pentru orice întrebare legată de prelucrarea datelor sau de acești termeni: office@kraftinox.com | +40 (727) 349 720 | +40 (748) 949 806 | Str. Budiului nr. 33, Târgu Mureș.',
             },
         ],
         backLabel: '← Înapoi la site',
@@ -104,7 +104,7 @@ const content = {
             },
             {
                 heading: '9. Contact',
-                body: 'For any questions regarding data processing or these terms: office@kraftinox.com | +40 730 612 266 | Str. Budiului no. 33, Târgu Mureș, Romania.',
+                body: 'For any questions regarding data processing or these terms: office@kraftinox.com | +40 (727) 349 720 | +40 (748) 949 806 | Str. Budiului no. 33, Târgu Mureș, Romania.',
             },
         ],
         backLabel: '← Back to site',
